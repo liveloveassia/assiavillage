@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Add animation to elements when they come into view
 const animateOnScroll = () => {
   const elements = document.querySelectorAll(
-    ".area-card, .place-card, .about-image, .about-text"
+    ".area-card, .news-card, .place-card, .about-image, .about-text",
   );
 
   elements.forEach((element) => {
@@ -41,7 +41,7 @@ const animateOnScroll = () => {
 // Set initial state for animation
 window.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(
-    ".area-card, .place-card, .about-image, .about-text"
+    ".area-card, .news-card, .place-card, .about-image, .about-text",
   );
 
   elements.forEach((element) => {
