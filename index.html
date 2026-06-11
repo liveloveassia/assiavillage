@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover Assia Village, a charming destination in Batroun, Lebanon. Explore stunning landscapes, rich history, pottery craftsmanship, churches, and authentic Lebanese hospitality.">
+    <meta name="keywords"
+        content="Assia, Assia Village, Batroun Lebanon, Lebanese tourism, village tourism, Assia history, pottery making, traditional crafts, Saint George Church, Saint Assia Monastery, Lady of Fortress, Assia landscapes, Mediterranean views, Lebanese mountains, winter snow, summer breezes, hiking trails, archaeological sites, Maronite churches, religious tourism, Assia municipality, Lebanese culture, authentic hospitality, Assia photos, village life, Lebanon travel, Batroun district, Assia neighborhoods, Yareta, Sharifa, Brareja, Ain Aya, Kor, Kfarhtna, Zan, Assia roads, Beirut to Assia, Tripoli to Assia, Jbeil to Assia, Assia altitude, Assia area, Assia population, Lebanese villages, mountain villages, coastal views, Assia waterfall, Joz River, MTV station, Assia climate, Assia weather, Assia festivals, Assia events, Assia accommodation, Assia restaurants, Assia cafes, Assia markets, Assia crafts, Assia art, Assia heritage, Assia traditions, Assia folklore, Assia legends, Saint George miracles, Assia protection, Turkish soldiers, Palestinian occupation, disease epidemics, Assia wonders, Assia treasury, gold legends, Assia monk, Assia doctor, Roman Empire, Byzantine era, Crusader period, Ottoman rule, French mandate, Lebanese independence, Assia development, Assia modernization, Assia preservation, Assia conservation, Assia tourism board, Lebanese ministry of tourism, Assia guides, Assia tours, day trips to Assia, weekend getaways, family vacations, cultural immersion, adventure tourism, nature walks, bird watching, photography spots, drone views, Assia Instagram, social media, travel blogs, Assia reviews, Assia ratings, top attractions, must-see places, hidden gems, off-the-beaten-path, sustainable tourism, eco-tourism, green destinations, Assia sustainability, community tourism, local experiences, artisan workshops, pottery classes, cooking lessons, Lebanese cuisine, traditional food, Assia specialties, olive oil, wine, fruits, vegetables, Assia farms, agriculture, livestock, Assia economy, employment, Assia youth, education, schools, universities, Assia healthcare, hospitals, clinics, Assia infrastructure, roads, electricity, water supply, Assia governance, municipality contact, Assia news, current events, Assia updates, Assia projects, development plans, Assia future, Assia vision, Assia pride, love Assia, live love Assia">
+    <meta name="author" content="Eng. Tony El Chediac">
+    <title>Live Love Assia - Beautiful Village in Lebanon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Assia/ei_1761591388637-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <span>Live Love Assia</span>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover the Charm of Assia Village</h1>
+                <p>Nestled in the beautiful Batroun District of Lebanon, Assia offers breathtaking landscapes, rich
+                    history, and authentic Lebanese hospitality.</p>
+                <a href="#discover" class="btn">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Announcements Section -->
+    <section class="best-areas" id="news">
+        <div class="container">
+            <h2>News & Announcements</h2>
+            <p>Read the latest updates and announcements from our community.</p>
+
+            <div class="news-grid">
+                <script>
+                    fetch("js/articles.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            const newsGrid = document.querySelector(".news-grid");
+                            if (!data || data.length === 0) {
+                                newsGrid.innerHTML = `
+                        <div class="no-articles">
+                            <i class="fas fa-newspaper"></i>
+                            <p>No articles available right now</p>
+                        </div>
+                    `;
+                                return;
+                            }
+                            data.forEach(article => {
+                                const newsCard = document.createElement("a");
+                                newsCard.classList.add("news-card");
+                                newsCard.href = `article.html?id=${article.id}`;
+                                newsCard.innerHTML = `
+                                <p class="typetag">${article.type || 'News'}</p>
+                                <p class="readmoretag">Read More</p>
+                                <img src="${article.image}" alt="${article.title}">
+                            `;
+                                newsGrid.appendChild(newsCard);
+                            });
+                        })
+                        .catch(error => {
+                            const newsGrid = document.querySelector(".news-grid");
+                            newsGrid.innerHTML = `
+                    <div class="no-articles">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Unable to load articles</p>
+                    </div>
+                `;
+                            console.error("Error loading articles:", error);
+                        });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Assia Village</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Known for its stunning natural beauty and peaceful atmosphere. Assia offers
+                        breathtaking views of
+                        the Mediterranean Sea and the surrounding mountains.</p>
+                    <p>the name of Assia <span class="syriac">( ܐܣܝܐ )</span> meaning Doctor in Suryoyo and
+                        Aramic.
+                        It is a picturesque town in the Mountains of Batroun located on a high mountain at
+                        an altitude
+                        (with its outskirts) from 750m to approximately 1100m. It is on an area of 945
+                        hectares, but the
+                        area of the village is in reality more than that. It is about 975 hectares, so it is
+                        among the
+                        first five ranks the largest areas in Batroun District.
+                        The town of Assia is bordered by more than 12 villages, and it is considered the
+                        largest area in
+                        the Batroun district in terms of the number of villages surrounding it. They are:
+                        Tartej,
+                        Hadtoun, Rasha, Alali, Marah Al-Hajj, Chobtine, Zan, Kfarshleiman, Helta, Jebla,
+                        Dael, Aura,
+                        Qandoula, Beshtoudar, Bchaaleh, Nahla, ...</p>
+                    <p>
+                        It can be reached from Batroun via: <br>
+                        Ijdabra, Bejdarfel, Ain-Aya, Kour, Kfarhtna, Zan, Assia = 25 km, 45 minutes. <br>
+                        Ijdabra, Bejdarfel, Batroun-Tannourine Road, Assia = 20 km, 20–30 minutes. <br>
+                        It is 72 km away from Beirut. <br>
+                        It is 46 km away from Tripoli. <br>
+                        It is 34 km away from Jbeil. <br>
+                        Assia has about 25 neighborhoods and three regions (Yarita, Sherife, Brarekha).
+                    </p>
+                    <button class="btn btn-black read-more-btn">Read More</button>
+                    <div class="additional-content" style="display: none;">
+                        <p>
+                            It is an estate famous for making pottery by hands using traditional methods
+                            since BC. When
+                            the Phoenicians came, they brought with them the wheel that is currently used in
+                            pottery
+                            making. However, the town of Assia did not use this machine, and it remained in
+                            the old
+                            traditional method without any kind of development intervening in it, and the
+                            industry
+                            remained the focus of attention.
+                            This town and its connection from Lebanon to the whole world. Also, on the
+                            outskirts of
+                            Assia there is a waterfall, and it is located close to the Borders of the
+                            villages of Rasha,
+                            Alali and Hadtoun, and according to the water maps of the district, the course
+                            of
+                            that river is
+                            also called the Joz River, and it is considered one of the Lebanese water
+                            resources,
+                            especially after the lighting of the MTV Lebanon (Lebanese Channel) on it, which
+                            directs
+                            its course to the
+                            valley of Ain-Aya.
+                            <br>
+                            In the town there are all types of tourism, in winter with snow and cold
+                            weather and in summer with fresh air breezes and cool weather in the evening,
+                            which makes
+                            you feel comfortable in the coastal weather. We are talking about the most
+                            beautiful village
+                            in Batroun: we are talking about the town of Assia!
+                            <br>
+                            A forgotten village, but it is very beautiful and carries with it the story of a
+                            people who
+                            loved pottery and devoted their lives to it. Other than that, the village’s
+                            houses are stone
+                            and red brick, and they are hundreds of years old, and they add another beauty
+                            to the
+                            Village’s beauty.
+                            As for religious tourism: From the ancient and beautiful Monastery of Saint
+                            Assia, a monk
+                            lived there in ancient times who helped all the sick. They say that the estate
+                            bears the
+                            name of Haldir and the monk. And the Church of Saint George and the other
+                            churches, as the
+                            town of Assia has about 10 churches, with their names mentioned above, and that
+                            are
+                            indispensable.
+                            The generosity and hospitality of its people.
+                        </p>
+                        <p>
+                            <b>The Assia Castle history part 1</b>
+                            <br>
+                            Since ancient times, there was a castle or, in other words, a palace of the
+                            kingdom at this
+                            location. Only a few stones remain of it next to Saint George church. If we walk
+                            around the
+                            church,
+                            we see the entrance to a cave (the treasury of Saint Assia), and on the other
+                            side, we see
+                            the
+                            sarcophagi where the children and servants of the kingdom were buried. We also
+                            see, on
+                            another side, but blocked with stones, the entrance to a tunnel through which
+                            the queen
+                            would escape from the castle to the "Shumays Valley" during attacks (according
+                            to history).
+                            The queen who owned the castle here also owned the castle in Beshtoudar, which
+                            is called the
+                            "Fortress Castle".
+                        </p>
+                        <p>
+                            <b>The Fortress Castle history part 2</b>
+                            <br>
+                            In the area of Beshtoudar, there is a mountain called "Mount Al-Hajar" (the
+                            mountain
+                            of stone). In it, there is a castle called the "Fortress Castle" (Qal'at
+                            Al-Hisn). This
+                            castle
+                            is
+                            located on the highest peak in the region. From there, the whole region can be
+                            observed.
+                            <br>
+                            Inside the castle, there are 3 reservoirs. There are also very deep rooms.
+                            According to
+                            history,
+                            the queen who owned the castle in Assia also owned this castle in Beshtoudar.
+                            She used to
+                            come
+                            down from the castle here (Al-Hisn) and go to the castle in Assia through a
+                            tunnel that
+                            connected the two castles. This is according to what the elders of the region
+                            say.
+                        </p>
+                        <br>
+                        <p>
+                            For tourism lovers The tourist areas in Assia are: <br>
+                            Hanna's & Jabbour Pottery <br>
+                            Lady of Alaa Waterfall and Lake <br>
+                            Churches <br>
+                            Old houses <br>
+                            Great views <br>
+                            Ain Blat <br>
+                            Hiking
+                        </p>
+                        <br>
+                        <p>
+                            For other information about the village, you Can contact the municipality at:
+                            <br>
+                            Assia Municipality: <a href="tel:+9616705048">+961 6 705 048</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Assia/assia above/assia 2.jpg" alt="Assia Village Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Areas Section -->
+    <section class="best-areas" id="areas">
+        <div class="container">
+            <h2>Best Areas to Visit</h2>
+            <p>Explore the most beautiful and interesting parts of our charming Town</p>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <img src="Assia/old houses/old houses 2.jpg" alt="Assia Old Town">
+                    <div class="area-info">
+                        <h3>The Old Houses</h3>
+                        <p>Wander through the charming narrow streets of Assia's historic center, lined with
+                            traditional
+                            stone houses and artisan workshops.</p>
+                    </div>
+                </div>
+
+                <div class="area-card">
+                    <img src="Assia/assia views/assia best view.jpg" alt="Assia Viewpoint">
+                    <div class="area-info">
+                        <h3>The Panoramic Viewpoint</h3>
+                        <p>Enjoy breathtaking views of the Mediterranean Sea and surrounding mountains from
+                            this
+                            spectacular vantage point.</p>
+                    </div>
+                </div>
+
+                <div class="area-card">
+                    <img src="Assia/pottery/pottery 2.jpg" alt="Assia Pottery Workshops">
+                    <div class="area-info">
+                        <h3>Pottery craftsmen and women</h3>
+                        <p>Visit the traditional pottery workshops where local artisans create beautiful
+                            handmade pieces
+                            using ancient techniques passed down through generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Section -->
+    <section class="discover" id="discover">
+        <div class="container">
+            <h2>Discover Amazing Places</h2>
+
+            <div class="places-container">
+                <!-- saint george church -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/saint george/saint georges church.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Saint George Church</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Known as the Maronite Church of Saint George. It is distinguished by its
+                            wonderful beauty and
+                            large size, as it holds the first place in terms of the largest church of Saint
+                            George in
+                            the Batroun district...</p>
+                        <a href="saint-george-church.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- saint assia monastery -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="assia/saint assia/saint assia monk.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Saint Assia Monastery</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>It is a monastery built during the days of the Roman Empire, and a monk lived in
+                            it who was
+                            the doctor of the region and it is said that he is Saint Assia, so the village
+                            was named
+                            after it...</p>
+                        <a href="saint-assia-monastery.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- shrine of saydet alaa -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="assia/saydet l alaa/saydet l alaa 8.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Shrine of Our Lady of Ala'a</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>A well on the foundations of the church, carved into the ancient rock, built on a
+                            Roman
+                            structure before the 17th century. Our Lady of "Hidak al-Qata'" or what is now
+                            known as Our
+                            Lady of the Castle.</p>
+                        <a href="lady-of-fortress.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- shrine of saydet fessa -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/saydet fessa/saydet fessa 1.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Lady of Fessa Church & Scout Area</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>She is the Iraqi Saint Fassa, she has only two churches in the whole world, a
+                            church in Iraq,
+                            and Our Lady of Fassa in Lebanon - Assia. Fessa was a village and one of the
+                            richest regions
+                            known as the Kingdom of Fessa.</p>
+                        <a href="lady-of-fessa.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- shrine of saint saba -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/saint saba/saint saba 1.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Saint Saba Monastery</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Here, the stones tell a story of a past untouched by time, a resilience deeply
+                            etched into
+                            the earth of this village in Asia, nestled amidst its mountains and the silence
+                            of nature.
+                        </p>
+                        <a href="saint-saba-monastery.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- shrine of saint touma -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/mar touma/mar touma 3.jpg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Saint Touma Monastery</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star-half-alt"></i>
+                        </div>
+                        <p>Saint Thomas Monastery, which is one of the few important religious and
+                            historical places in
+                            Lebanon named after Saint Thomas. The monastery dates back centuries, and is an
+                            attractive
+                            point to enjoy the tranquility.</p>
+                        <a href="saint-touma-monastery.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- waterfall and lake -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/waterfall and lake/waterfall 8.jpeg" alt="Assia waterfall">
+                    </div>
+                    <div class="place-info">
+                        <h3>Waterfall and Lake</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                        </div>
+                        <p>One of the top 100 water features and sources in Lebanon. The Waterfall and Pool
+                            of Our Lady
+                            of Fortress is one of the most prominent natural and tourist destinations in the
+                            region and
+                            Lebanon.</p>
+                        <a href="waterfall-and-lake.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- Pottery -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/pottery/pottery 1.jpg" alt="Assia pottery">
+                    </div>
+                    <div class="place-info">
+                        <h3>Pottery</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                        </div>
+                        <p>Assia Pottery (فخار آسيا) is a traditional form of ceramic craft practiced in the
+                            village of
+                            Assia in the Batroun district of northern Lebanon. Over generations, potters in
+                            Assia have
+                            preserved a technique</p>
+                        <a href="pottery.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- ain Blat -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/ain blat/ain blat 7.jpeg" alt="Assia View">
+                    </div>
+                    <div class="place-info">
+                        <h3>Ain Blat</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Ain El Balat is one of the beautiful areas in Assia. It is distinguished by
+                            springs of fresh
+                            water that emerge from the mountains, and constitutes a source of refreshment
+                            for visitors.
+                        </p>
+                        <a href="ain-blat.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- Haychboun Cross -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/haychboun cross/haychboun cross 3.jpg" alt="Haychboun Cross">
+                    </div>
+                    <div class="place-info">
+                        <h3>Haychboun Cross</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>The site is distinguished by its breathtaking natural beauty, situated on a
+                            mountaintop,
+                            offering a stunning view of central Batroun and the coast. The entire region can
+                            be observed
+                            from this strategic vantage point.</p>
+                        <a href="haychboun-cross.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- Khabtoura Cross -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/assia cross/assia cross 4.jpg" alt="Khabtoura Cross">
+                    </div>
+                    <div class="place-info">
+                        <h3>Khabtoura Cross</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>The site is distinguished by its breathtaking natural beauty, situated on a
+                            mountaintop,
+                            offering a stunning view of central Batroun and the coast. The entire region can
+                            be observed
+                            from this strategic vantage point.</p>
+                        <a href="assia-cross.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- Saydet l Najat -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/saydet l najat/saydet l najat 3.jpeg" alt="Saydet l Najat">
+                    </div>
+                    <div class="place-info">
+                        <h3>Chapel of Our Lady of Najat</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>one of the titles given to the Virgin Mary, expressing believers’ faith in her
+                            role as an
+                            intercessor and helper in times of hardship and distress. This name reflects
+                            people’s trust
+                            in Mary’s love and mercy,</p>
+                        <a href="saydet-l-najat.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <!-- hosen cross -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="Assia/hosen cross/hosen castle 3.jpg" alt="Hosen Cross">
+                    </div>
+                    <div class="place-info">
+                        <h3>Hosen Castle</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Nestled above the village of Bechtoudar in Lebanon’s North Governorate (Batroun
+                            District),
+                            the site known as Kal‘at el Ḥosn literally “Castle of the Fortress” is a hilltop
+                            ruin and
+                            vantage point rather than a fully-standing medieval castle.
+                        </p>
+                        <a href="hosen-castle.html" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>More content</h2>
+            <div class="gallery-container">
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/assia views/assia views 14.webp" alt="Assia Views">
+                    <h3>Assia Views</h3>
+                    <a href="assia-views.html" class="btn">View Gallery</a>
+                </div>
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/snow/snow 12.jpg" alt="Assia's Winter">
+                    <h3>Assia's Winter</h3>
+                    <a href="assia-snow.html" class="btn">View Gallery</a>
+                </div>
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/assia above/assia with sunset.jpg" alt="Assia Above with sunset">
+                    <h3>Assia Above</h3>
+                    <a href="assia-above.html" class="btn">View Gallery</a>
+                </div>
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/old houses/assia old houses 345.jpg" alt="Assia Old Houses with sunset">
+                    <h3>Assia Old Houses</h3>
+                    <a href="assia-old-houses.html" class="btn">View Gallery</a>
+                </div>
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/assia guest houses.png" alt="Assia guest house">
+                    <h3>Assia Guest Houses</h3>
+                    <a href="assia-guest-houses.html" class="btn">View More</a>
+                </div>
+                <!-- card -->
+                <div class="gallery-card">
+                    <img src="Assia/septWinery.jpg" alt="Assia restaurant">
+                    <h3>Assia Restaurant</h3>
+                    <a href="assia-restaurants.html" class="btn">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Locations Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2>All Locations</h2>
+            <iframe
+                src="https://www.google.com/maps/d/embed?mid=1F-td-AZZnLelai2RywWZIiriZf4M_1Q&hl=en&ehbc=2E312F"></iframe>
+            <p>For directions or more information, contact the Assia Municipality at: <a href="tel:+9616705048">+961 6
+                    705 048</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+    </footer>
+
+    <script src="js/header&footer.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Preloader functionality
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
