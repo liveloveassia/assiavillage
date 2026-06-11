@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read articles about Assia Village, Lebanon">
+    <meta name="author" content="Eng. Tony El Chediac">
+    <title>Article - Assia Village</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Assia/liveloveassia.jpg" type="image/x-icon">
+    <style>
+        .article-image {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .article-image img {
+            width: 350px;
+            height: auto;
+        }
+
+        .article-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .article-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            white-space: pre-wrap;
+        }
+
+        .loading,
+        .error {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .error {
+            color: #e74c3c;
+        }
+
+        .error i {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Article Content -->
+    <section>
+        <div class="container" id="articleContainer">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading article...</p>
+            </div>
+        </div>
+        <section class="about" id="article">
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <script src="js/header&footer.js"></script>
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+
+        // Get ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        // Container element
+        const container = document.getElementById('articleContainer');
+        const containerarticle = document.getElementById('article');
+
+        // Function to show error
+        function showError() {
+            container.innerHTML = `
+                <div class="error">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Article Not Found</h2>
+                    <p>Sorry, the article you're looking for doesn't exist.</p>
+                </div>
+            `;
+
+            containerarticle.style.display = "none";
+        }
+
+        // Function to show article
+        function showArticle(article) {
+            container.innerHTML = `
+                <div class="article-image">
+                    <img src="${article.image}" alt="${article.title}">
+                </div>`;
+            containerarticle.innerHTML += `
+                <div class="container">
+                <h1 class="article-title">${article.title}</h1>
+                <div class="article-description">${article.description.replace(/\n/g, '<br>')}</div>  
+                </div>
+            `;
+        }
+
+        // Load article if ID exists
+        if (articleId) {
+            fetch('js/articles.json')
+                .then(response => response.json())
+                .then(articles => {
+                    const article = articles.find(a => a.id == articleId);
+                    if (article) {
+                        showArticle(article);
+                    } else {
+                        showError();
+                    }
+                })
+                .catch(() => showError());
+        } else {
+            showError();
+        }
+    </script>
+</body>
+
+</html>
