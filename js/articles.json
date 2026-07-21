@@ -1,0 +1,30 @@
+[
+        {
+        "id": 1,
+        "type": "announcement",
+        "image": "../article-image/NajiOsta.jpg",
+        "title": "Naji Osta live at Assia Street Festival",
+        "description": "Kickstarting the festivities on the very first night! Join the incredible Naji Osta for an unforgettable musical evening in the heart of Assia.\n\nDate: Friday 31 July\nTime: Starting 9pm\nTickets: $10 & $15\n\nFor Reservations: 70-156008 / 71-043431\nStreet Festival Info: 81-003766"
+    },
+    {
+        "id": 2,
+        "type": "announcement",
+        "image": "../article-image/assia-street-festival.jpg",
+        "title": "Assia Street Festival",
+        "description": "For the first time, Street Festival will visit the wonderful village of Assia.\n In collaboration with Assia Municipality, we invite you to get to know our lovely town in the middle area of Batroun and to spend with us 3 nights of festivities and joyful moments.\nMeet us on 31, 1 & 2 August to spend unforgettable nights together!!\n\nFor Information & Reservations: 81-003766"
+    },
+    {
+        "id": 3,
+        "type": "announcement",
+        "image": "../article-image/Rodolphe.jpg",
+        "title": "Rodolphe El Khoury & DJ Joe at Assia Street Festival",
+        "description": "The excitement continues on the second night of the festival with a double line-up! Enjoy a special performance by Rodolphe El Khoury followed by an energetic night with DJ Joe.\n\nDate: Saturday 1 August\nTime: Starting 9pm\n\nFor Reservations: 70-156008 / 71-043431\nStreet Festival Info: 81-003766"
+    },
+    {
+        "id": 4,
+        "type": "announcement",
+        "image": "../article-image/zigzagzone.jpeg",
+        "title": "Zigzag Zone at Assia Street Festival",
+        "description": "A fun-filled night for all ages! Don't miss the special appearance by Zigzag Zone on the final evening of the festival.\n\nDate: Sunday 2 August\nTime: Starting 7pm\n\nFor Reservations: 70-156008 / 71-043431\nStreet Festival Info: 81-003766"
+    }
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the historic old houses of Assia Village, Lebanon. Discover traditional architecture, cultural heritage, and charming stone-built homes in this mountainous destination.">
+    <meta name="keywords"
+        content="Assia Old Houses, Assia Village, Batroun, Lebanon, traditional architecture, historic homes, stone houses, Lebanese heritage, cultural tourism, photography, Assia landmarks">
+    <meta name="author" content="Eng. Tony El Chediac">
+    <title>Assia Old Houses - Assia Village</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Assia/ei_1761591388637-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+    </header>
+
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("Assia/old houses/assia old houses 345.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+        }
+
+        .hero-content h1 {
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+
+        .hero-content p {
+            margin-bottom: 0px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Assia Old Houses</h1>
+                <p>Explore the historic old houses of Assia Village, Lebanon. Discover traditional stone architecture, cultural heritage, and the charm of ancient homes in this mountainous destination.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="about" id="content">
+        <div class="container">
+            <h2>About Assia Old Houses</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        The old houses of Assia Village stand as timeless testaments to the region's rich history and architectural heritage. Built with local stone and traditional techniques, these charming homes reflect the village's past, offering a glimpse into the daily life and craftsmanship of earlier generations. Preserving these structures helps maintain Assia's cultural identity and provides visitors with an authentic experience of Lebanese rural heritage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="Assia/old houses/assia old 1232.jpg" alt="Assia old house 1">
+                <img src="Assia/old houses/assia old houses 345.jpg" alt="Assia old houses 2">
+                <img src="Assia/old houses/old houses 1.jpg" alt="Old houses 1">
+                <img src="Assia/old houses/old houses 2.jpg" alt="Old houses 2">
+                <img src="Assia/old houses/old houses 34.jpg" alt="Old houses 3">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+    </footer>
+
+    <script src="js/header&footer.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Preloader functionality
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
