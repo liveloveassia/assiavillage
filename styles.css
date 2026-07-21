@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Dancing+Script:wght@400..700&family=Dynalight&family=Lateef:wght@200;300;400;500;600;700;800&family=Manufacturing+Consent&family=Noto+Sans+Syriac+Western:wght@100..900&family=Oleo+Script:wght@400;700&family=Press+Start+2P&family=Rubik+Mono+One&display=swap");
 
-<<<<<<< HEAD
-=======
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
->>>>>>> 4f2b1b9fb5631fdab38af088ff641a354a904b92
+
 /* Global Styles */
 :root {
   --primary-color: #000000;
@@ -85,14 +83,11 @@ iframe {
   border: 0;
 }
 
-<<<<<<< HEAD
 .weatherwidget-io,
 .weatherwidget-io iframe {
   border-radius: 0px !important;
 }
 
-=======
->>>>>>> 4f2b1b9fb5631fdab38af088ff641a354a904b92
 /* Header Styles */
 header {
   background-color: var(--primary-color);
@@ -171,7 +166,6 @@ nav ul li a {
 
 /* news and announcements */
 .news-grid {
-<<<<<<< HEAD
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -180,14 +174,6 @@ nav ul li a {
   width: 100%;
   overflow-x: auto;
   padding: 20px 0;
-=======
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  justify-content: center;
-  gap: 30px;
-  margin-top: 50px;
-  width: 100%;
->>>>>>> 4f2b1b9fb5631fdab38af088ff641a354a904b92
 }
 
 .news-card {
@@ -196,10 +182,7 @@ nav ul li a {
   height: auto;
   overflow: hidden;
   border-radius: 5px;
-<<<<<<< HEAD
   flex-shrink: 0;
-=======
->>>>>>> 4f2b1b9fb5631fdab38af088ff641a354a904b92
 }
 
 .news-card img {

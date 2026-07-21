@@ -9,10 +9,7 @@ if (header) {
             <nav id="navMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-<<<<<<< HEAD
                     <li><a href="index.html#news">News & Announcements</a></li>
-=======
->>>>>>> 4f2b1b9fb5631fdab38af088ff641a354a904b92
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#areas">Best Areas</a></li>
                     <li><a href="index.html#discover">Discover</a></li>
