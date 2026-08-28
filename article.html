@@ -115,7 +115,7 @@
         function showArticle(article) {
             container.innerHTML = `
                 <div class="article-image">
-                    <img src="${article.image}" alt="${article.title}">
+                    <img src="${article.image}" alt="${article.title}" loading="lazy">
                 </div>`;
             containerarticle.innerHTML += `
                 <div class="container">
