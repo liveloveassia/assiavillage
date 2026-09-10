@@ -51,15 +51,22 @@
                         .then(response => response.json())
                         .then(data => {
                             const newsGrid = document.querySelector(".news-grid");
+
                             if (!data || data.length === 0) {
+                                // Center the empty state message
+                                newsGrid.style.justifyContent = "center";
                                 newsGrid.innerHTML = `
-                        <div class="no-articles">
-                            <i class="fas fa-newspaper"></i>
-                            <p>No articles available right now</p>
-                        </div>
-                    `;
+                                <div class="no-articles">
+                                    <i class="fas fa-newspaper"></i>
+                                    <p>No articles available right now</p>
+                                </div>
+                            `;
                                 return;
                             }
+
+                            // Align content to the left when articles are present
+                            newsGrid.style.justifyContent = "flex-start";
+
                             data.forEach(article => {
                                 const newsCard = document.createElement("a");
                                 newsCard.classList.add("news-card");
@@ -74,12 +81,14 @@
                         })
                         .catch(error => {
                             const newsGrid = document.querySelector(".news-grid");
+                            // Center the error message as well
+                            newsGrid.style.justifyContent = "center";
                             newsGrid.innerHTML = `
-                    <div class="no-articles">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <p>Unable to load articles</p>
-                    </div>
-                `;
+                            <div class="no-articles">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p>Unable to load articles</p>
+                            </div>
+                        `;
                             console.error("Error loading articles:", error);
                         });
                 </script>
