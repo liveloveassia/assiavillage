@@ -384,7 +384,7 @@ section[id] {
   inset: 0;
   background: url("Assia/assia above/assia 1.jpg") no-repeat center center/cover;
   transform: scale(1.02);
-  animation: heroZoom 12s ease-out both;
+  animation: heroZoom 8s ease-out both;
 }
 
 .hero-overlay {
