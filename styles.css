@@ -1048,7 +1048,7 @@ section[id] {
 /* ===== footer ===== */
 
 .site-footer {
-  background: #080808;
+  background: var(--color-bg);
 }
 
 .footer-main {
