@@ -1201,19 +1201,6 @@ section[id] {
   line-height: 1.25;
 }
 
-.page-content h3:first-child {
-  margin-top: 0;
-}
-
-.page-content h3:not(:first-child)::before {
-  display: block;
-  width: 34px;
-  height: 2px;
-  margin-bottom: 14px;
-  background: var(--color-accent);
-  content: "";
-}
-
 .page-content b,
 .page-content strong {
   color: var(--color-accent);
