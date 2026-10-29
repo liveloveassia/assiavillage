@@ -1073,13 +1073,13 @@ section[id] {
 
 .chedilex-footer-container .chedilex-footer-content {
   color: #858585 !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   font-family: var(--font-main);
 }
 
 .chedilex-footer-container .chedilex-footer-content img {
   width: auto !important;
-  height: 40px !important;
+  height: 35px !important;
   object-fit: contain;
 }
 
