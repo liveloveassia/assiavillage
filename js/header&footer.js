@@ -6,7 +6,7 @@
     ["#about", "About"],
     ["#areas", "Best Areas"],
     ["#discovery", "Discovery"],
-    ["#news", "News"],
+    ["#gallery", "Gallery"],
   ];
 
   const navLinks = (className) =>
