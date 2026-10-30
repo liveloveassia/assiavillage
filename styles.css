@@ -406,7 +406,6 @@ section[id] {
   padding-bottom: 30px;
 }
 
-
 .hero h1,
 .section-heading h2,
 .feature-content h2,
@@ -987,8 +986,6 @@ section[id] {
   font-size: clamp(48px, 7vw, 82px);
 }
 
-
-
 /* ===== contact cta ===== */
 
 .contact-section {
@@ -1011,8 +1008,6 @@ section[id] {
 .contact-inner h2 span {
   color: #454545;
 }
-
-
 
 .contact-phone {
   display: inline-flex;
@@ -1062,7 +1057,7 @@ section[id] {
 
 .footer-main > p {
   color: var(--color-muted);
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -1091,7 +1086,7 @@ section[id] {
 
 .footer-links a {
   color: #bdbdbd;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   transition: color var(--transition);
 }
@@ -1113,7 +1108,7 @@ section[id] {
 .footer-bottom p,
 .footer-bottom a {
   color: #858585;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .footer-bottom a {
@@ -1313,7 +1308,6 @@ section[id] {
   font-size: 12px;
 }
 
-
 /* ===== back to top ===== */
 
 .back-to-top {
@@ -1351,7 +1345,6 @@ section[id] {
 
 /* ===== scroll reveal ===== */
 
-/* only hide when JS is confirmed running, so nothing disappears if script.js fails */
 html.js-enabled .reveal,
 html.js-enabled .area-card,
 html.js-enabled .place-card,
@@ -1654,8 +1647,6 @@ html.js-enabled .about-text.is-visible {
     margin-top: 48px;
   }
 
-
-
   .section {
     padding: 70px 0;
   }
@@ -1715,10 +1706,6 @@ html.js-enabled .about-text.is-visible {
 
   .page-content h3 {
     font-size: 23px;
-  }
-
-  .article-page {
-    padding-top: calc(var(--header-height) + 45px);
   }
 
   .map-wrap iframe {
